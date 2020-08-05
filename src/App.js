@@ -58,7 +58,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h2>GIF Gallery</h2>
+      <h2>Choose Your Hero</h2>
       <Container>
       {loading ? (
         <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
