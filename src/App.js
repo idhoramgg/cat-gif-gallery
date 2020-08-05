@@ -8,9 +8,10 @@ import './App.css';
 
 const News = styled.div`
   width: 300px;
-  height: 400px;
-  border: 1px solid gray;
-  margin: 5px;
+  height: 420px;
+  border: 1px solid #333;
+  margin: 7px;
+  background-color: #f3f3f3;
   padding: 10px;
   border-radius: 4px;
 `
@@ -18,6 +19,12 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+`
+const ButtonFight = styled.button`
+  padding: 5px 20px;
+  background-color: red;
+  color: white;
+  border-radius: 4px;
 `
 
 const App = () => {
@@ -58,7 +65,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h2>Choose Your Hero</h2>
+      <h2>Choose Your Fighter</h2>
       <Container>
       {loading ? (
         <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
@@ -70,6 +77,7 @@ const App = () => {
               <News key={index}>
                 <img src={item.images.original.url} style={{height: "300px", objectFit: 'cover', width: "300px"}} alt="imageww" />
                 <h3>{item.title}</h3>
+                <ButtonFight>Fight !</ButtonFight>
               </News>
             ))
           )
